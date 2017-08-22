@@ -1,0 +1,24 @@
+{
+  "name": "connectfour-bot",
+  "version": "1.2.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "node test.js",
+    "restart": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pagoru/connectfour-bot.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pagoru/connectfour-bot/issues"
+  },
+  "homepage": "https://github.com/pagoru/connectfour-bot#readme",
+  "dependencies": {
+    "discord-games": "latest"
+  }
+}
