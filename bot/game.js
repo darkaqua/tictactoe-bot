@@ -208,7 +208,6 @@ class Game {
      */
     start(){
         this.started = true;
-        global.metrics.games.inc();
         this.currentTurn = Math.round(Math.random()) + 1;
         this.currentSelection = 0;
         this.currentPositions = Array.from([0, 0]);
@@ -373,9 +372,7 @@ class Game {
     stop(){
         if(this.stopped) return;
         this.message.clearReactions().catch(_ => _);
-        if(this.started){
-            global.metrics.games.dec();
-        } else {
+        if(!this.started){
             this.message.delete(0).catch(console.error);
         }
         if(this.reactionCollector)

@@ -2,7 +2,7 @@
 global.config = require('./config.json')
 
 const Discord = require('discord.js')
-const client = new Discord.Client()
+const client = global.bot = new Discord.Client()
 
 const messageHandler = require('./bot/events/message')
 client.on('message', (message) => {
